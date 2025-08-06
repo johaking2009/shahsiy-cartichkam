@@ -1,0 +1,198 @@
+.telegram-cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px;
+    margin: 16px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left {
+    align-self: flex-start;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+.card h2 {
+    margin-bottom: 16px;
+    color: #0088cc;
+}
+
+.telegram-cards-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 60px;
+    min-height: 100vh;
+    padding: 60px 0;
+    padding-left: 10px;   /* YANGI QATOR */
+    padding-right: 10px;  /* YANGI QATOR */
+    overflow-y: auto;
+    background: #f0f0f0;
+}
+
+.card-vertical {
+    width: calc(600px + (100vw - 1440px) * 0.3);
+    max-width: 90vw;
+    min-width: 280px;
+    min-height: 320px;
+    background: #920303;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: box-shadow 0.3s, width 0.3s;
+}
+
+.card-vertical.left {
+    align-self: flex-start;
+    margin-left: 5vw;
+    margin-right: auto;
+}
+
+.card-vertical.right {
+    align-self: flex-end;
+    margin-right: 5vw;
+    margin-left: auto;
+}
+
+.card-vertical h2 {
+    color: #0088cc;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+/* 1440px dan kichik ekranlar uchun */
+@media (max-width: 1440px) {
+    .card-vertical {
+        width: calc(90vw - 40px);
+        padding: 32px 16px;
+    }
+    .card-vertical h2 {
+        font-size: 2rem;
+    }
+}
+
+/* 900px dan kichik ekranlar uchun */
+@media (max-width: 900px) {
+    .card-vertical {
+        width: 95vw;
+        padding: 24px 8px;
+    }
+    .telegram-cards-vertical {
+        gap: 32px;
+        padding: 32px 10px; /* padding-left/right saqlansin */
+    }
+    .card-vertical h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* 600px dan kichik ekranlar uchun */
+@media (max-width: 600px) {
+    .card-vertical {
+        width: 98vw;
+        min-width: 0;
+        padding: 16px 2vw;
+        border-radius: 14px;
+    }
+    .card-vertical h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* 400px dan kichik ekranlar uchun */
+@media (max-width: 400px) {
+    .card-vertical {
+        padding: 8px 1vw;
+    }
+    .card-vertical h2 {
+        font-size: 1rem;
+    }
+}
+
+.telegram-link {
+    margin: 40px auto 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #222;
+}
+.telegram-link a {
+    color: #0088cc;
+    text-decoration: underline;
+    word-break: break-all;
+    font-weight: bold;
+}
+
+.img-portrait {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 16px;
+    background: #eee;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.video-portrait {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 16px;
+    background: #eee;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.img-info-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.img-info-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.img-info-text {
+    flex: 1;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .img-info-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .img-info-text {
+        text-align: center;
+    }
+}
