@@ -5,6 +5,7 @@ const ExampleComponent = () => {
         <div>
             <h1>This is an Example Component</h1>
             <p>Here you can add specific content or functionality.</p>
+            <span>Yangilanishlar</span>
         </div>
     );
 };
